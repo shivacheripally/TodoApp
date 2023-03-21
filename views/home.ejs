@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title><%= locals.title%></title>
+        <link rel="stylesheet" href="/css/home.css" type="text/css">
+    </head>
+    <body>
+
+        <div class="box">
+            <h1>TODO App</h1>
+        
+            <form action="/create-task" method="post" id="form-box">
+                <input type="text" name="taskdata" placeholder="what do you need to do?" id="input-box" required>
+        
+                <div class="category-date">
+        
+                    <div class="category">
+                        <label for="taskcategory">Category</label>
+                        <select id="taskcategory" name="taskcategory" required>
+                          <option value="" selected disabled>Choose a Category</option>
+                          <option value="Work">Work</option>
+                          <option value="Personal">Personal</option>
+                          <option value="School">School</option>
+                          <option value="Cleaning">Cleaning</option>
+                          <option value="Other">Other</option>
+                        </select>
+        
+                    </div>
+                    <div class="date">
+                        <label>Due Date:</label>
+                        <input type="date" name="date" placeholder="dd/mm/yyyy" required>
+                    </div>
+                </div>
+        
+                <div class="add-delete">
+                    <div class="add">
+                        <button type="submit" class="white-color">+ ADD TASK</button>
+                    </div>
+                    <div class="delete">
+                        <button id="delete-btn" class="white-color"><i class="fa-solid fa-trash-can"></i> DELETE </button>
+                    </div>
+                </div>
+            </form>
+
+            <ul id="task-list">
+                <% for(let i of taskList){ %>
+                  <li class="data">
+                    <div class="data-des">
+                      <input type="checkbox" name="ids[]" value="<%= i._id %>">
+                      <div class="data-items">
+                        <span><%= i.taskdata %></span>
+                        <span class="date-cal"><i class="fa-regular fa-calendar-days"> </i><%= i.date %><span>
+                      </div>
+                    </div>
+                    <div class="datatype-del">
+                      <p class="data-type <% if(i.taskcategory === 'Work') { %>work-color<% } else if(i.taskcategory === 'Personal') { %>personal-color<% } %> white-color"><%= i.taskcategory %></p>
+                    </div>
+                  </li>
+                <% } %>
+            </ul>
+              
+        </div>
+
+        <script type="text/javascript" src="/js/home.js"></script>
+
+        <script src="https://kit.fontawesome.com/e79f1189be.js" crossorigin="anonymous"></script>
+    </body>
+
+</html>

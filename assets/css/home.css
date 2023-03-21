@@ -1,0 +1,173 @@
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:768px){
+    .box{
+        width: 90%;
+    }
+}
+
+.box ul{
+    list-style-type: none;
+}
+
+#input-box{
+    height: 80px;
+    width: 100%;
+    border: none;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.category-date{
+    height: 80px;
+    width: 100%;
+    display: flex;
+}
+
+.category-date div{
+    height: 50px;
+    width: 50%;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.category select{
+    border: none;
+    background-color: white;
+}
+
+
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.date-cal{
+    display: flex;
+    gap: 10px;
+}
+
+.date input{
+    border: none;
+}
+
+.add-delete{
+    display: flex;
+}
+
+.add-delete div{
+    margin-top: 10px;
+    height: 50px;
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+.add{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.add button{
+    margin-right: 5px;
+    background-color: rgb(31, 27, 27);
+    height: 100%;
+    width: 35%;
+    border: none;
+}
+
+.delete{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.delete button{
+    margin-left: 5px;
+    background-color: red;
+    height: 100%;
+    width: 35%;
+    border: none;
+}
+
+.white-color{
+    color: white;
+}
+
+.data{
+    margin-top: 10px;
+    height: 70px;
+    border-top: 1px solid black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.data-des{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.data-type{
+    width: 90px;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+}
+
+.datatype-del{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work-color {
+    background-color: #FFC107; /* yellow */
+}
+
+.personal-color {
+  background-color: #2196F3; /* blue */
+}
+  
+.cleaning-color{
+    background-color: green;
+}
+  
+
