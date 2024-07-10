@@ -1,7 +1,7 @@
 //require the mongoose library
 const mongoose = require('mongoose');
 //connnect to db
-mongoose.connect('mongodb+srv://shivacheripally14:s4fkxGKq9XaXzelg@cluster0.evidqem.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://shivacheripally14:rOnPqyxsxZ17xsF5@cluster0.igq0tjf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 //aquire the connection
 const db = mongoose.connection;
 //if Error
@@ -10,7 +10,3 @@ db.once('error',console.error.bind(console,'Error connecting to db'));
 db.once('open',function(){
     console.log('Successfully Connected to DataBase');
 });
-
-// s4fkxGKq9XaXzelg
-
-// mongodb+srv://shivacheripally14:<password>@cluster0.evidqem.mongodb.net/?retryWrites=true&w=majority
